@@ -1,0 +1,6 @@
+framework module GMYTSDKAdapter {
+  umbrella header "GMYTSDKAdapter.h"
+  export *
+
+  module * { export * }
+}
