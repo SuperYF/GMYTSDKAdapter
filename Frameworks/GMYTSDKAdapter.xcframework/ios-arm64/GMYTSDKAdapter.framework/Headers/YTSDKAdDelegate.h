@@ -103,6 +103,59 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+//MARK: 插屏广告
+@class YTSDKInterstitialAdListener, YTSDKInterstitialAdView;
+@protocol YTSDKInterstitialAdDelegate <NSObject>
+@required
+/// 渲染成功，可调用 showInViewController: 展示
+- (void)onInterstitialRenderSuccess:(YTSDKInterstitialAdView *)adView;
+/// 点击关闭
+- (void)onInterstitialAdCloseClick:(YTSDKInterstitialAdView *)adView;
+
+@optional
+- (void)onInterstitialErrorLoad:(YTSDKInterstitialAdListener *)listener withError:(NSError *)error;
+- (void)onInterstitialSuccessLoad:(YTSDKInterstitialAdListener *)listener;
+- (void)onInterstitialRenderFail:(YTSDKInterstitialAdListener *)listener withError:(NSError *)error;
+- (void)onInterstitialAdClick:(YTSDKInterstitialAdView *)adView;
+
+@end
+
+//MARK: 激励视频
+@protocol YTSDKRewardedDelegate <NSObject>
+
+/// 激励视频加载完成
+- (void)onYtAdLoaded:(NSString *)placementID;
+
+/// 激励视频加载失败
+- (void)onYtNoAdError:(NSString *)placementID error:(NSError *_Nullable)error;
+
+/// 渲染成功，可调用 showRewardedVideoInRootViewController:
+- (void)onYtAdRenderSuccess:(NSString *)placementID;
+- (void)onYtAdRenderFail:(NSString *)placementID error:(NSError *_Nullable)error;
+
+/// 开始播放
+- (void)rewardedVideoDidStartPlayingForPlacementID:(NSString *)placementID
+                                             extra:(NSDictionary *)extra;
+
+/// 播放结束
+- (void)rewardedVideoDidEndPlayingForPlacementID:(NSString *)placementID
+                                           extra:(NSDictionary *)extra;
+
+/// 点击广告
+- (void)rewardedVideoDidClickForPlacementID:(NSString *)placementID
+                                      extra:(NSDictionary *)extra;
+
+/// 关闭
+- (void)rewardedVideoDidCloseForPlacementID:(NSString *)placementID
+                                   rewarded:(BOOL)rewarded
+                                      extra:(NSDictionary *)extra;
+
+/// 奖励发放
+- (void)rewardedVideoDidRewardSuccessForPlacemenID:(NSString *)placementID
+                                             extra:(NSDictionary *)extra;
+
+@end
+
 @interface YTSDKAdDelegate : NSObject
 
 @end

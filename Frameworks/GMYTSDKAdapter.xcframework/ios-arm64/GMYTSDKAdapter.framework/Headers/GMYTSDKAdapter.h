@@ -22,6 +22,9 @@ FOUNDATION_EXPORT const unsigned char YTAdSDKVersionString[];
 #import <GMYTSDKAdapter/YTSDKAdDelegate.h>
 #import <GMYTSDKAdapter/YTSDKStartManager.h>
 #import <GMYTSDKAdapter/YTSDKConst.h>
+#import <GMYTSDKAdapter/YTSDKInterstitialAdListener.h>
+#import <GMYTSDKAdapter/YTSDKInterstitialAdView.h>
+#import <GMYTSDKAdapter/YTSDKRewardedVideoAdListener.h>
 
 
 
