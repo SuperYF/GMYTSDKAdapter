@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "GMYTSDKAdapter"
-  spec.version      = "1.0.1"
+  spec.version      = "2.0.0"
   spec.summary      = "iOS开源工具SDK，封装网络、广告、埋点、基础组件"
 
   # This description is used to generate tags and improve search results.
