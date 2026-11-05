@@ -2,30 +2,15 @@
 //  GMYTSDKAdapter.h
 //  GMYTSDKAdapter
 //
-//  Created by renpin-ios on 2026/6/30.
+//  Created by renpin-ios on 2026/10/30.
 //
 
 #import <Foundation/Foundation.h>
 
 //! Project version number for GMYTSDKAdapter.
-FOUNDATION_EXPORT double YTAdSDKVersionNumber;
+FOUNDATION_EXPORT double GMYTSDKAdapterVersionNumber;
 
 //! Project version string for GMYTSDKAdapter.
-FOUNDATION_EXPORT const unsigned char YTAdSDKVersionString[];
+FOUNDATION_EXPORT const unsigned char GMYTSDKAdapterVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like
-
-
-#import <GMYTSDKAdapter/YTSDKNativeExpressView.h>
-#import <GMYTSDKAdapter/YTNavtiveAdListener.h>
-#import <GMYTSDKAdapter/YTSDKSplashAdListener.h>
-#import <GMYTSDKAdapter/YTSDKAdDelegate.h>
-#import <GMYTSDKAdapter/YTSDKStartManager.h>
-#import <GMYTSDKAdapter/YTSDKConst.h>
-#import <GMYTSDKAdapter/YTSDKInterstitialAdListener.h>
-#import <GMYTSDKAdapter/YTSDKInterstitialAdView.h>
-#import <GMYTSDKAdapter/YTSDKRewardedVideoAdListener.h>
-
-
-
-
+// In this header, you should import all the public headers of your framework using statements like #import <GMYTSDKAdapter/PublicHeader.h>
