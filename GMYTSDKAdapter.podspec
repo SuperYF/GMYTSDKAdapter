@@ -39,7 +39,7 @@ DESC
   spec.source       = { :git => "https://github.com/SuperYF/GMYTSDKAdapter.git", :tag => "#{spec.version}" }
 
   # 平台最低版本
-  spec.ios.deployment_target = "12.0"
+  spec.ios.deployment_target = "13.0"
   spec.swift_versions = ["5.0"]
   # 3. 系统依赖框架（UIKit必写）
   spec.frameworks = "UIKit", "Foundation"
@@ -63,7 +63,7 @@ spec.resource_bundles = {
 spec.pod_target_xcconfig = {
   "EXCLUDED_ARCHS[sdk=iphonesimulator*]" => "arm64",
   # 仅模拟器强制12，真机不受影响，依然支持iOS11设备
-  "IPHONEOS_DEPLOYMENT_TARGET[sdk=iphonesimulator*]" => "12.0"
+  "IPHONEOS_DEPLOYMENT_TARGET[sdk=iphonesimulator*]" => "13.0"
 }
   
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
