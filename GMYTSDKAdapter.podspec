@@ -43,18 +43,14 @@ DESC
   # 4. 第三方依赖（如有，示例）
   spec.dependency "Ads-CN-Beta/BUAdSDK", "~> 7.8.0.2"
   spec.dependency "Ads-CN-Beta/CSJMediation", "~> 7.8.0.2"
+  spec.dependency "YTAdSDK", "~> 2.0.4"
 
   # 二进制框架路径
   spec.vendored_frameworks = "Frameworks/GMYTSDKAdapter.xcframework"
 
   # 资源打包成独立 Bundle（关键，防止资源冲突）
 spec.resource_bundles = {
-  "GMYTSDKRes" => [
-    "Resources/**/*.xcassets",
-    "Resources/**/*.xib",
-    "Resources/**/*.png",
-    "Resources/**/*.jpg"
-  ]
+ 
 }
 spec.pod_target_xcconfig = {
   "EXCLUDED_ARCHS[sdk=iphonesimulator*]" => "arm64",
